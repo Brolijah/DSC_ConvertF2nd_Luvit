@@ -220,7 +220,7 @@ ConvertF1_to_F2 = function(filepath)
 				local timer       = in_buffer:readUInt32LE(pos+40)  -- TIMER
 				local unkVal_3U   = in_buffer:readUInt32LE(pos+44)  -- UNKVAL_3U
 
-                last_timestamp = possibleTimeStamp
+				last_timestamp = possibleTimeStamp
 				pos = pos + 44  -- We start looking here on the next iteration.
 				entries = entries + 1  -- Increment the number of targets we've located
 
@@ -309,8 +309,8 @@ else
 
 	--local prog, prev = 0, 0
 	for i=1, #input do
-        print("  File #" .. i .. ": " .. input[i])
-        ConvertF1_to_F2(SOURCE_DIR .. input[i])
+		print("  File #" .. i .. ": " .. input[i])
+		ConvertF1_to_F2(SOURCE_DIR .. input[i])
         
 		--[[
 		prog = math.floor(1000000 * (i / #input)/10000)
